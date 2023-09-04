@@ -20,10 +20,11 @@ const DropdownDemo = () => {
             <p className="mb-1">Technologies Used</p>
             <ul className="mb-8 ml-8 list-disc">
                 <li>ReactJS</li>
+                <li>AWS (S3, Route 53, CloudFront)</li>
                 <li>NextJS *NEW*</li>
                 <li>Tailwind CSS *NEW*</li>
                 <li>TypeScript *NEW*</li>
-                <li>AWS (S3, Route 53, CloudFront)</li>
+                <li>Visual Studio Code *NEW*</li>
             </ul>
 
             <DropdownSelect

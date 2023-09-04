@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen p-24">
       <h1 className="text-2xl text-center mb-6">Demos</h1>
-      <p className="text-center mb-6">AKA some of the skill tests I've been asked to create.</p>
+      <p className="text-center mb-6">AKA some of the skill tests I have been asked to create.</p>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
         <a
@@ -51,7 +51,7 @@ export default function Home() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            We'll have to see about this one...
+            We will have to see about this one...
           </p>
         </a>
       </div>

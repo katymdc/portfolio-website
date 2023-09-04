@@ -32,19 +32,19 @@ const DropdownSelect = ({
     const selectId = useId();
     const searchId = useId();
 
-    const selectElement = useRef(null);
-    const searchElement = useRef(null);
+    const selectElement = useRef<HTMLSelectElement>(null);
+    const searchElement = useRef<HTMLInputElement>(null);
 
     useLayoutEffect(() => {
-        if (isOpen && isSearchable && searchElement.current) {
+        if (isOpen && isSearchable && searchElement && searchElement.current) {
             searchElement.current.focus();
-        } else if (isOpen && selectElement.current) {
+        } else if (isOpen && selectElement && selectElement.current) {
             selectElement.current.focus();
         }
         if(!isOpen) {
             setSearchValue('');
         }
-    }, [isOpen]);
+    }, [isOpen, isSearchable]);
 
     useEffect(()=> {
         const selectedOption = options.find((item) => item.value === selectValue);
@@ -65,7 +65,6 @@ const DropdownSelect = ({
     };
     
     const selectClickHandler = (e: React.MouseEvent<HTMLOptionElement, MouseEvent>) => {
-        console.log('option click');
         setSelectValue(e.currentTarget.value);
         onChange(e.currentTarget.value);
         setIsOpen(false);
